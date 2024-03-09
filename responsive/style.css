@@ -310,7 +310,7 @@ img {
     }
 }
 
-@media (max-width: 769px) {
+@media (min-width: 767px) {
     .top__text h1 {
         font-size: 44px;
     }
