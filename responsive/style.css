@@ -13,8 +13,12 @@
 body {
     font-family: "Lato", sans-serif;
 }
+svg {
+    display: block;
+}
 img {
     max-width: 100%;
+    height: auto;
 }
 .center {
     padding-left: calc(50% - 570px);
@@ -23,6 +27,7 @@ img {
 
 /* Top */
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +35,57 @@ img {
     padding-top: 18px;
     padding-bottom: 19px;
 }
+.menu__list {
+    position: absolute;
+    top: 79px;
+    right: 0;
+    width: 232px;
+    min-height: 634px;
+    background-color: #fff;
+    display: none;
+    transition: 0.8s ease-in;
+    z-index: 10;
+}
 
+.active {
+    display: block;
+}
+.menu__list_wrap {
+    padding-top: 32px;
+    padding-left: 33px;
+    padding-bottom: 32px;
+}
+
+.menu__list_wrap span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: var(--red);
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+.menu-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 16.8px;
+    margin-bottom: 24px;
+    color: var(--dark)
+
+}
+.menu__list li {
+    list-style-type: none;
+    margin-bottom: 11px;
+    margin-left: 21px;
+}
+
+.menu__list li a {
+    text-decoration: none;
+    color: #6F6E6E;
+    font-size: 14px;
+    font-weight: 400;
+}
 .navbar-left {
     display: flex;
     align-items: center;
@@ -41,6 +96,24 @@ img {
     align-items: center;
     gap: 33px;
 }
+.cart {
+    position: relative;
+}
+.badge {
+    position: absolute;
+    display: block;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: var(--red);
+    top: -7px;
+    right: -10px;
+    text-align: center;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 400;
+}
+
 
 .search svg {
    fill: var(--grey);
@@ -106,23 +179,16 @@ img {
 }
 
 .item-big {
-    grid-column: span 3;;
+    grid-column: span 3;
+}
+
+.offer__item img {
+    filter: brightness(40%)
+
 }
 
 .offer__item {
     position: relative;
-}
-
-.offer__item::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 22, 22, 70%);
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
 
 .offer__items_text {
@@ -131,7 +197,7 @@ img {
     left: 50%;
     text-align: center;
     text-transform: uppercase;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     z-index: 2;
 }
 .offer__items_text > p:last-child{
@@ -163,9 +229,12 @@ img {
     grid-template-rows: 2;
     gap: 30px;
     padding-bottom: 46px;
+    justify-content: center;
 }
 .products__item {
     text-align: left;
+    background-color: #F8F8F8;
+    border: 1px solid var(--white);
 }
 .products__item h2 {
     font-size: 13px;
@@ -188,7 +257,10 @@ img {
     font-weight: 400;
     margin-bottom: 24px;
 }
-
+.products__item_text {
+    padding-left: 16px;
+    padding-right: 29px;
+}
 .button {
     background-color: inherit;
     border: 1px solid;
@@ -199,4 +271,62 @@ img {
     font-size: 16px;
     font-weight: 400;
 
+}
+
+
+/* 768-1024 */
+
+@media (max-width: 1025px){    
+
+    .navbar-left {
+        margin-left: 64px;
+    }
+    .navbar-right {
+        margin-right: 64px;
+    }
+
+    .center {
+        padding-left: calc(50% - 496px);
+        padding-right: calc(50% - 496px);
+    }
+    .top__text h1 {
+        font-size: 46px;
+    }
+    .top__text span {
+        font-size: 30px;
+    }
+
+    .offer__items {
+        grid-template-columns: repeat(3, 310px);
+        gap: 25px;
+    }
+
+    .products__items {
+        grid-template-columns: repeat(2, 360px);
+        grid-template-rows: auto;
+        grid-template-areas: "a a";
+        gap: 30px;
+        padding-bottom: 46px;
+    }
+}
+
+@media (max-width: 769px) {
+    .top__text h1 {
+        font-size: 44px;
+    }
+    .top__text span {
+        font-size: 24px;
+    }
+    .products__items {
+        gap: 16px;
+    }
+    .products__text h1 {
+        font-size: 30px;
+    }
+
+    .offer__items {
+        grid-template-columns: repeat(3, 233px);
+        grid-template-rows: 167px 116px;
+        gap: 20px;
+    }
 }
