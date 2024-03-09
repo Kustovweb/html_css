@@ -276,7 +276,7 @@ img {
 
 /* 768-1024 */
 
-@media (max-width: 1025px){    
+@media (max-width: 1024px){    
 
     .navbar-left {
         margin-left: 64px;
@@ -310,7 +310,7 @@ img {
     }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) and (max-width: 1000px) {
     .top__text h1 {
         font-size: 44px;
     }
