@@ -524,7 +524,11 @@ img {
     }
 }
 
-@media (min-width: 768px) and (max-width: 980px) {
+@media (min-width: 768px) {
+    .center {
+        padding-left: calc(50% - 336px);
+        padding-right: calc(50% - 336px);
+    }
     .top__text h1 {
         font-size: 44px;
     }
@@ -546,6 +550,8 @@ img {
         grid-template-rows: 167px 116px;
         gap: 20px;
     }
+
+
 }
 
 
