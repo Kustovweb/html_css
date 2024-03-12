@@ -405,18 +405,22 @@ img {
     transform: translate(-50%, -50%);
     min-height: 44px;
     min-width: 139px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
     display: none;
 }
 
 .products__button::after {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 30px;
+    width: 26px;
+    height: 23px;
     top: 50%;
     left: 13px;
     background-image: url('img/cart.svg');
     background-repeat: no-repeat;
+    background-size: 26px 23px;
     transform: translateY(-50%);
 }
 
