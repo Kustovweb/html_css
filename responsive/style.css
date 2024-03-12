@@ -84,6 +84,39 @@ img {
     color: var(--dark)
 }
 
+
+ @-webkit-keyframes scale-up-tl {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+  }
+  @keyframes scale-up-tl {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+  }
+  
+.menu__list {
+    animation: scale-up-tl 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 .menu__list li {
     list-style-type: none;
     margin-bottom: 11px;
@@ -294,9 +327,10 @@ img {
 
 .products__item_img {
     position: relative;
+    
 }
 
-.products__item:hover .products__item_img::after {
+.products__item:hover .products__item_img::before {
     position: absolute;
     content: '';
     width: 100%;
@@ -306,6 +340,10 @@ img {
     top: 0;
     left: 0;
     cursor: pointer;
+}
+
+.products__item:hover .products__button {
+    display: block;
 }
 
 .products__item h2 {
@@ -344,9 +382,43 @@ img {
     cursor: pointer;
     font-size: 16px;
     font-weight: 400;
-
+    transition: all .3s ease;
 }
 
+.button:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.products__button {
+    position: absolute;
+    text-decoration: none;
+    color: var(--white);
+    border: 1px solid var(--white);
+    top:50%;
+    left: 50%;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    padding-left: 52px;
+    padding-right: 12px;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    min-height: 44px;
+    min-width: 139px;
+    display: none;
+}
+
+.products__button::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    top: 50%;
+    left: 13px;
+    background-image: url('img/cart.svg');
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+}
 
 .feature {
     display: flex;
@@ -491,6 +563,8 @@ img {
     height: 32px;
     background-color: var(--white);
     text-decoration: none;
+    transition: all .4s ease;
+    
 }
 
 .footer__icon:hover {
