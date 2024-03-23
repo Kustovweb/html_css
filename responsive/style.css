@@ -737,10 +737,24 @@ img {
 }
 
 .controls {
+  display: flex;
+  justify-content: start;
+  gap: 320px;
   margin-bottom: 60px;
 }
+.controls details > summary {
+  list-style-type: none;
+  cursor: pointer;
+}
+.controls__sort {
+  display: flex;
+  gap: 28px;
+  color: #6F6E6E;
+  font-weight: 400;
+  font-size: 14px;
+}
 
-.hamburger {
+.hamburger summary {
   background-color: inherit;
   border: none;
   display: inline-flex;
@@ -751,4 +765,37 @@ img {
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+}
+
+.details {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.details__box {
+  position: absolute;
+  top: 22px;
+  left: -9px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #FFFFFF;
+  width: 80px;
+  gap: 6px;
+  z-index: 20;
+  padding: 7px 9px 11px;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.2117647059);
+}
+.details__box label {
+  display: flex;
+  gap: 9px;
 }/*# sourceMappingURL=style.css.map */
