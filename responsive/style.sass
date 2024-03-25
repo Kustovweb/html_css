@@ -6,9 +6,14 @@
     box-sizing: border-box
     padding: 0
     margin: 0
+html
+    scroll-behavior: smooth
 
 body
     font-family: "Lato", sans-serif
+    min-height: 100vh
+    display: flex
+    flex-direction: column
 
 svg
     display: block
@@ -21,6 +26,8 @@ img
     padding-left: calc(50% - 570px)
     padding-right: calc(50% - 570px)
 
+.main
+    flex: 1
 /* Top */
 .header
     position: relative
@@ -116,7 +123,7 @@ img
     align-items: center
     gap: 33px
 
-.cart
+.icon-cart
     position: relative
 
 .badge
@@ -564,6 +571,7 @@ img
 
     .footer
         flex-flow: column-reverse wrap
+        justify-self: flex-end
 
         &__socials
             margin-bottom: 40px
@@ -625,7 +633,7 @@ img
     .user
         display: none
 
-    .cart
+    .icon-cart
         display: none
 
     .navbar-right
@@ -796,3 +804,124 @@ img
     & label
         display: flex
         gap: 9px
+
+// Cart
+.breadcrumbs
+    &__h1
+        font-size: 24px
+        font-weight: 400
+
+.cart
+    padding-top: 110px
+    padding-bottom: 110px
+    display: flex
+    gap: 128px
+    &__buttons
+        display: flex
+        justify-content: space-between
+        flex-flow: row wrap
+    &__btn
+        background-color: $white
+        border: 1px solid #A4A4A4
+        padding: 17px 40px
+        cursor: pointer
+        font-size: 14px
+        font-weight: 400
+        line-height: 16px
+    &__adress
+        &-btn
+            align-self: start
+            font-size: 11px
+            color: #A4A4A4
+        &__form
+            display: flex
+            flex-direction: column
+            gap: 20px
+    &__input
+        height: 45px
+        padding-left: 17px
+        width: 360px
+        border: 1px solid #A4A4A4
+        & .cart__btn
+            padding: 11px 15px
+    &__items
+        width: 652px
+    &__item
+        position: relative
+        width: 652px
+        display: flex
+        gap: 31px
+        box-shadow: 17px 19px 24px 0px #00000021
+        margin-bottom: 40px
+
+        &-close
+            position: absolute
+            top: 28px
+            right: 22px
+
+        &-img
+            width: 262px
+            height: 306px
+        &__content
+            padding-top: 22px
+            width: 262px
+            &__heading
+                padding-bottom: 42px
+                font-weight: 400
+                font-size: 24px
+                line-height: 28px
+            &__p
+                font-size: 22px
+                font-weight: 400
+                line-height: 26px
+                padding-bottom: 6px
+                color: #575757
+            &__price
+                color: $red
+            &__input
+                margin-left: 24px
+                width: 44px
+                border: 1px solid
+                border-color: #EAEAEA
+                background-color: $white
+                text-align: center
+                font-size: 18px
+                border-radius: 1px
+    &__price
+        margin-top: 57px
+        background-color: #F5F3F3
+        width: 360px
+        min-height: 214px
+        padding-left: 42px
+        padding-right: 42px
+        padding-bottom: 42px
+        display: flex
+        flex-direction: column
+        &__content
+            position: relative
+            text-align: right
+            &::before
+                content: ''
+                position: absolute
+                display: block
+                width: 100%
+                height: 1px
+                background-color: #E2E2E2
+                bottom: -21px
+                left: 0
+            &__sub
+                margin-top: 39px
+                font-size: 11px
+                font-weight: 400
+            &__grand
+                margin-top: 12px
+                font-size: 16px
+                font-weight: 700
+        &__button
+            background-color: $red
+            border: none
+            padding: 15px 42px
+            color: $white
+            text-transform: uppercase
+            margin-top: 39px
+            cursor: pointer
