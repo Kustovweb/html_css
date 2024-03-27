@@ -933,3 +933,81 @@ img
             text-transform: uppercase
             margin-top: 39px
             cursor: pointer
+
+    //Registration
+
+.registration-box
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    padding-top: 64px
+    padding-bottom: 96px
+
+.registration
+    &__form
+        flex: 0 0 360px
+        &__heading
+            color: $dark
+            font-size: 16px
+            font-weight: 400
+    &__content
+        flex: 0 0 652px
+        font-size: 24px
+        font-weight: 400
+    &__list
+        margin-top: 21px
+        list-style-type: none
+    &__item
+        padding-bottom: 16px
+        background-image: url(img/check_mark.svg)
+        background-repeat: no-repeat
+        background-size: 20px 16px
+        background-position: 0 0
+        padding-left: 38px
+    &__heading
+        font-size: 24px
+        font-weight: 400
+        text-transform: uppercase
+        line-height: 28px
+        margin-bottom: 22px
+    &__input
+        border: 1px solid #A4A4A4
+        width: 360px
+        height: 45px
+        padding-left: 17px
+        margin-top: 20px
+        margin-bottom: 20px
+        outline-color: $red
+        &__checkbox
+            margin-bottom: 33px
+            &__item
+                display: none
+            &__item:checked + .registration__custom-checkbox
+                background-color: $red
+                border-color: $red
+
+    &__custom-checkbox
+        display: inline-block
+        width: 20px
+        height: 20px
+        border: 1px solid #ccc
+        border-radius: 50%
+        cursor: pointer
+    &__label
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        margin-right: 20px
+    &__button
+        display: inline-flex
+        justify-content: space-around
+        align-items: center
+        padding: 16px 29px
+        border: none
+        background-color: $red
+        color: $white
+        gap: 20px
+        font-size: 14px
+        font-weight: 400
+        cursor: pointer

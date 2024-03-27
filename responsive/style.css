@@ -987,4 +987,92 @@ img {
   text-transform: uppercase;
   margin-top: 39px;
   cursor: pointer;
+}
+
+.registration-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+
+.registration__form {
+  flex: 0 0 360px;
+}
+.registration__form__heading {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 400;
+}
+.registration__content {
+  flex: 0 0 652px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.registration__list {
+  margin-top: 21px;
+  list-style-type: none;
+}
+.registration__item {
+  padding-bottom: 16px;
+  background-image: url(img/check_mark.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 16px;
+  background-position: 0 0;
+  padding-left: 38px;
+}
+.registration__heading {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 28px;
+  margin-bottom: 22px;
+}
+.registration__input {
+  border: 1px solid #A4A4A4;
+  width: 360px;
+  height: 45px;
+  padding-left: 17px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  outline-color: #F16D7F;
+}
+.registration__input__checkbox {
+  margin-bottom: 33px;
+}
+.registration__input__checkbox__item {
+  display: none;
+}
+.registration__input__checkbox__item:checked + .registration__custom-checkbox {
+  background-color: #F16D7F;
+  border-color: #F16D7F;
+}
+.registration__custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.registration__label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+.registration__button {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 29px;
+  border: none;
+  background-color: #F16D7F;
+  color: #FFFFFF;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
