@@ -858,7 +858,7 @@ img
 
 .slider
     position: relative
-    width: 100 vw
+    width: 100vw
     background-color: #F7F7F7
     &__container
         display: flex
@@ -957,6 +957,9 @@ img
         justify-content: center
         font-size: 14px
         font-weight: 400
+        & .details__sort
+            &:hover
+                cursor: pointer
 
 //media
 
@@ -1131,3 +1134,13 @@ img
             width: 320px
     .breadcrumbs
         justify-content: center
+    .collection-box
+        margin-top: 0
+        border: none
+    .collection
+        &__text
+            width: 320px
+            font-size: 12px
+        &__controls
+            font-size: 10px
+            gap: 24px
