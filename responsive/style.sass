@@ -1011,3 +1011,33 @@ img
         font-size: 14px
         font-weight: 400
         cursor: pointer
+
+// Product Page
+
+.slider
+    position: relative
+    margin-bottom: 664px
+    width: 100 vw
+    background-color: #F7F7F7
+    &__container
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+    &-btn
+        position: absolute
+        display: block
+        padding: 12px 18px
+        border: none
+        top: 50%
+        transform: translateY(-50%)
+        &:hover
+            cursor: pointer
+        &:hover path
+            fill: $red
+    &-left
+        left: 0
+    &-right
+        right: 0
+.collection
+    margin-top: -664px
