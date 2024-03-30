@@ -574,7 +574,6 @@ img {
   position: absolute;
   top: -22px;
   left: 0;
-  width: 100%;
 }
 .filter__item__summary {
   position: relative;
@@ -1230,9 +1229,25 @@ img {
   .collection__text {
     width: 320px;
     font-size: 12px;
+    margin: 0;
   }
   .collection__controls {
     font-size: 10px;
     gap: 24px;
+  }
+  .filter__heading {
+    display: none;
+  }
+  .filter__icon {
+    width: 37px;
+    height: 25px;
+  }
+  .controls {
+    text-align: left;
+  }
+  .controls__sort {
+    font-size: 12px;
+    gap: 22px;
+    padding-right: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
