@@ -564,7 +564,7 @@ img {
 }
 
 .filter-box {
-  width: 360px;
+  flex: 1 1 auto;
   position: relative;
   z-index: 20;
 }
@@ -684,7 +684,10 @@ img {
   padding-top: 110px;
   padding-bottom: 110px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 128px;
+  flex-flow: row wrap;
 }
 .cart__buttons {
   display: flex;
@@ -995,6 +998,10 @@ img {
   text-align: center;
   min-height: 601px;
   border: 1px solid #EAEAEA;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 .collection__price {
   color: #F16D7F;
@@ -1204,8 +1211,8 @@ img {
     left: 16px;
     transform: translateY(-50%);
   }
-  .registration-box {
-    justify-content: center;
+  .registration {
+    text-align: center;
   }
   .registration__form {
     flex: 0 0 320px;
@@ -1249,5 +1256,8 @@ img {
     font-size: 12px;
     gap: 22px;
     padding-right: 10px;
+  }
+  .cart__item {
+    width: 358px;
   }
 }/*# sourceMappingURL=style.css.map */
