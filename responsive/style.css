@@ -1204,8 +1204,8 @@ img {
     left: 16px;
     transform: translateY(-50%);
   }
-  .registration {
-    text-align: center;
+  .registration-box {
+    justify-content: center;
   }
   .registration__form {
     flex: 0 0 320px;
